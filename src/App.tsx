@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import HeroSection from './sections/HeroSection';
 import WhatWeDoSection from './sections/WhatWeDoSection';
@@ -12,13 +11,12 @@ import WhoItsForSection from './sections/WhoItsForSection';
 import WhyNeptuneSection from './sections/WhyNeptuneSection';
 import PricingSection from './sections/PricingSection';
 import ContactSection from './sections/ContactSection';
-import Blog from './sections/Blog';
 import Footer from './components/Footer';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Home() {
+function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -124,17 +122,6 @@ function Home() {
       {/* Footer */}
       <Footer />
     </div>
-  );
-}
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
-    </BrowserRouter>
   );
 }
 
