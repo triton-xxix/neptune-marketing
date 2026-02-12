@@ -1,3 +1,3 @@
--e # Neptune Marketing
+# Neptune Marketing
 
-Case studies added: 01:32:58
+Blog index added: 02:49:42
