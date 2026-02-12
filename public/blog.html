@@ -22,7 +22,7 @@
         .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #fff 0%, #2EC3E5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
         .blog-grid { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .blog-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; transition: transform 0.3s, border-color 0.3s; cursor: pointer; }
+        .blog-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; transition: transform 0.3s, border-color 0.3s; cursor: pointer; text-decoration: none; display: block; }
         .blog-card:hover { transform: translateY(-5px); border-color: rgba(46,195,229,0.5); }
         .category { display: inline-block; background: rgba(46,195,229,0.2); color: #2EC3E5; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
         .blog-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #fff; }
@@ -50,16 +50,43 @@
         <p>Actionable insights on lead reactivation, SMS marketing, and performance-based growth.</p>
     </section>
     <section class="blog-grid">
-        <article class="blog-card">
+        <a href="/case-study-200k.html" class="blog-card">
             <span class="category">Case Study</span>
+            <h2>How We Recovered £200K from 18-Month-Old Leads</h2>
+            <p>A B2B services company had 12,000 dormant leads sitting in their CRM. We used AI + SMS to recover £204,000 in revenue with a 23% response rate and 8.4% conversion rate.</p>
+            <div class="meta">
+                <span>📅 Feb 2026</span>
+                <span>⏱️ 8 min read</span>
+            </div>
+        </a>
+        <a href="/case-study-healthcare.html" class="blog-card">
+            <span class="category">Case Study</span>
+            <h2>300% Lead Volume Increase for Healthcare Provider</h2>
+            <p>A healthcare group with 15 clinics was losing 300+ leads monthly to slow follow-up. Our AI SMS system increased qualified leads by 300% and achieved 94% patient satisfaction.</p>
+            <div class="meta">
+                <span>📅 Jan 2026</span>
+                <span>⏱️ 6 min read</span>
+            </div>
+        </a>
+        <a href="/case-study-agencies.html" class="blog-card">
+            <span class="category">Strategy</span>
+            <h2>Why Most Lead Gen Agencies Fail</h2>
+            <p>The uncomfortable truth about why traditional lead generation agencies consistently disappoint—and the warning signs to watch for before signing a contract.</p>
+            <div class="meta">
+                <span>📅 Feb 2026</span>
+                <span>⏱️ 5 min read</span>
+            </div>
+        </a>
+        <a href="#" class="blog-card">
+            <span class="category">Guide</span>
             <h2>The £200K Lead Reactivation Playbook</h2>
-            <p>How we helped a client recover £200K+ from dormant leads using SMS + AI. Discover the exact strategy that turned cold leads into £200,000 in revenue.</p>
+            <p>How we helped a client recover £200K+ from dormant leads using SMS + AI. Discover the exact strategy that turned cold leads into revenue.</p>
             <div class="meta">
                 <span>📅 Feb 8, 2026</span>
                 <span>⏱️ 8 min read</span>
             </div>
-        </article>
-        <article class="blog-card">
+        </a>
+        <a href="#" class="blog-card">
             <span class="category">Strategy</span>
             <h2>Why Most Lead Gen Agencies Fail</h2>
             <p>The hidden goldmine in existing leads vs chasing new ones. Learn why your current leads are worth more than you think and why agencies ignore them.</p>
@@ -67,8 +94,8 @@
                 <span>📅 Feb 5, 2026</span>
                 <span>⏱️ 6 min read</span>
             </div>
-        </article>
-        <article class="blog-card">
+        </a>
+        <a href="#" class="blog-card">
             <span class="category">Business</span>
             <h2>Performance-Based Pricing: A Better Model</h2>
             <p>Why we only get paid when you win. Explore how our performance-based model aligns our success with yours and eliminates agency risk.</p>
@@ -76,7 +103,7 @@
                 <span>📅 Feb 1, 2026</span>
                 <span>⏱️ 5 min read</span>
             </div>
-        </article>
+        </a>
     </section>
     <footer class="footer">
         <p>&copy; 2026 Neptune Marketing. All rights reserved.</p>
