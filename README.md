@@ -1,3 +1,3 @@
 # Neptune Marketing
 
-Blog landing page updated: 02:52:51
+Blog nav added: 02:59:34
