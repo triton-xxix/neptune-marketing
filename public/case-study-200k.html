@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: How We Recovered £200K from 18-Month-Old Leads | Neptune Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0B0F1C; color: #fff; line-height: 1.7; }
+        .noise-overlay { position: fixed; inset: 0; opacity: 0.03; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; background: rgba(11,15,28,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo span { color: #2EC3E5; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #2EC3E5; }
+        .btn { background: #2EC3E5; color: #0B0F1C; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
+        .hero { padding: 10rem 2rem 4rem; background: linear-gradient(180deg, rgba(46,195,229,0.1) 0%, transparent 50%); }
+        .hero-inner { max-width: 900px; margin: 0 auto; }
+        .category { display: inline-block; background: rgba(46,195,229,0.2); color: #2EC3E5; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2; background: linear-gradient(135deg, #fff 0%, #2EC3E5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .meta { display: flex; gap: 2rem; color: rgba(255,255,255,0.5); font-size: 0.875rem; margin-bottom: 2rem; }
+        .content { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .content h2 { font-size: 1.75rem; font-weight: 700; margin: 3rem 0 1.5rem; color: #2EC3E5; }
+        .content h3 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 1rem; color: #fff; }
+        .content p { color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; }
+        .content ul { color: rgba(255,255,255,0.8); margin: 1.5rem 0; padding-left: 1.5rem; }
+        .content li { margin-bottom: 0.75rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .stat-card { background: rgba(46,195,229,0.1); border: 1px solid rgba(46,195,229,0.3); border-radius: 12px; padding: 1.5rem; text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: #2EC3E5; }
+        .stat-label { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-top: 0.5rem; }
+        .quote { background: rgba(255,255,255,0.05); border-left: 4px solid #2EC3E5; padding: 1.5rem; margin: 2rem 0; font-style: italic; color: rgba(255,255,255,0.9); }
+        .cta-box { background: linear-gradient(135deg, rgba(46,195,229,0.15) 0%, rgba(46,195,229,0.05) 100%); border: 1px solid rgba(46,195,229,0.3); border-radius: 16px; padding: 2rem; margin: 3rem 0; text-align: center; }
+        .cta-box h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .cta-box p { color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+        .footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 3rem 2rem; text-align: center; color: rgba(255,255,255,0.5); margin-top: 4rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">Neptune <span>Marketing</span></a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/#contact" class="btn">Get Started</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="category">Case Study</span>
+            <h1>How We Recovered £200K from 18-Month-Old Leads Using AI + SMS</h1>
+            <div class="meta">
+                <span>📅 February 2026</span>
+                <span>⏱️ 8 min read</span>
+                <span>🏢 B2B Services</span>
+            </div>
+        </div>
+    </section>
+    
+    <article class="content">
+        <p><strong>The Problem:</strong> A £5M revenue B2B services company had 12,000 leads sitting dormant in their CRM. These weren't cold prospects—they were people who had requested quotes, attended webinars, or downloaded whitepapers over the past 18 months. But the sales team was focused on new acquisition, and these warm leads were forgotten.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">12,000</div>
+                <div class="stat-label">Dormant Leads</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Months Old</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">£0</div>
+                <div class="stat-label">Revenue Generated</div>
+            </div>
+        </div>
+        
+        <h2>The Neptune Approach</h2>
+        <p>Traditional email reactivation campaigns had failed. Open rates were sub-5%, and the few responses were spam complaints. We took a different approach:</p>
+        
+        <h3>1. AI-Powered Segmentation</h3>
+        <p>We didn't blast everyone with the same message. Our AI analyzed each lead's original source, engagement history, and inferred intent to create micro-segments:</p>
+        <ul>
+            <li><strong>Quote Requesters:</strong> Had asked for pricing but never bought</li>
+            <li><strong>Webinar Attendees:</strong> Engaged with content but no sales conversation</li>
+            <li><strong>Content Downloaders:</strong> High intent signals, low follow-up</li>
+            <li><strong>Lost Deals:</strong> Had conversations that went cold</li>
+        </ul>
+        
+        <h3>2. Conversational SMS, Not Broadcasts</h3>
+        <p>Instead of "Hey, still interested?" mass texts, we deployed AI SMS agents that could hold real conversations:</p>
+        <ul>
+            <li>Referenced their original inquiry specifically</li>
+            <li>Asked intelligent follow-up questions</li>
+            <li>Handled objections in real-time</li>
+            <li>Qualified interest before human handoff</li>
+        </ul>
+        
+        <div class="quote">
+            "The difference was night and day. Our old email campaigns felt like shouting into the void. The SMS conversations felt like a sales rep actually following up—except it was happening 24/7 with every single lead simultaneously."
+        </div>
+        
+        <h3>3. Performance-Based Structure</h3>
+        <p>Because we only get paid on results, we had skin in the game. Our AI iterated daily based on response patterns:</p>
+        <ul>
+            <li>Adjusted messaging based on what converted</li>
+            <li>Optimized send times per segment</li>
+            <li>A/B tested conversation flows continuously</li>
+        </ul>
+        
+        <h2>The Results</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">£204,000</div>
+                <div class="stat-label">Revenue Recovered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">23%</div>
+                <div class="stat-label">Response Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8.4%</div>
+                <div class="stat-label">Conversion Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">47</div>
+                <div class="stat-label">Days to Results</div>
+            </div>
+        </div>
+        
+        <h3>Key Breakthroughs</h3>
+        <ul>
+            <li><strong>SMS vs Email:</strong> 94% open rate vs 4.8% for previous email campaigns</li>
+            <li><strong>Conversational vs Broadcast:</strong> 23% response rate vs 0.3% for one-way SMS blasts</li>
+            <li><strong>AI Qualification:</strong> Only 12% of conversations needed human sales rep intervention</li>
+            <li><strong>Speed to Lead:</strong> Average first response from AI: 2.3 minutes</li>
+        </ul>
+        
+        <h2>What Made This Work</h2>
+        <p>Three factors separated this from typical "lead reactivation" attempts:</p>
+        
+        <h3>1. Context Preservation</h3>
+        <p>The AI knew each lead's history. When a webinar attendee responded, it referenced the specific webinar topic. When a quote requester replied, it acknowledged their original inquiry. This wasn't cold outreach—it was warm follow-up at scale.</p>
+        
+        <h3>2. Two-Way Conversations</h3>
+        <p>Most SMS automation is one-way blasts. Our AI actually held conversations, answering questions, handling "not right now" objections, and booking meetings when interest was clear.</p>
+        
+        <h3>3. Aligned Incentives</h3>
+        <p>Our performance-based model meant we only made money when revenue was generated. This drove constant optimization that wouldn't happen with a fixed monthly retainer.</p>
+        
+        <div class="quote">
+            "We'd written these leads off. They were in a 'nurture' sequence that nobody monitored. Neptune turned a dead database into our second-highest revenue channel in under two months."
+        </div>
+        
+        <h2>The Broader Lesson</h2>
+        <p>This wasn't about fancy AI or marketing tricks. It was about something simpler: <strong>most companies abandon warm leads way too early.</strong></p>
+        
+        <p>The average B2B sale takes 6-12 touchpoints. Most sales teams give up after 2-3. Our AI never gives up, never forgets to follow up, and never lets a warm lead go cold.</p>
+        
+        <p>The £200K recovered here isn't the ceiling—it's the floor. For companies with larger dormant databases, the revenue potential is significantly higher.</p>
+        
+        <div class="cta-box">
+            <h3>Have dormant leads sitting in your CRM?</h3>
+            <p>We recover revenue from cold leads using AI + SMS—no upfront cost, we only get paid when you win.</p>
+            <a href="/#contact" class="btn">Book a Free Lead Audit</a>
+        </div>
+    </article>
+    
+    <footer class="footer">
+        <p>&copy; 2026 Neptune Marketing. All rights reserved.</p>
+    </footer>
+</body>
+</html>
