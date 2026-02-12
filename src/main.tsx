@@ -1,3 +1,4 @@
+// Trigger redeploy to pick up new vercel.json config
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
