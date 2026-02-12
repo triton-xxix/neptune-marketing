@@ -18,6 +18,7 @@ const Navigation = () => {
     { label: 'Approach', href: '#approach' },
     { label: 'Results', href: '#results' },
     { label: 'Services', href: '#services' },
+    { label: 'Blog', href: '/blog', external: true },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -28,6 +29,14 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const handleNavClick = (link: { label: string; href: string; external?: boolean }) => {
+    if (link.external) {
+      window.location.href = link.href;
+    } else {
+      scrollToSection(link.href);
+    }
   };
 
   return (
@@ -54,7 +63,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link)}
                 className="text-[#A9B3C5] hover:text-[#F4F7FB] text-sm font-medium transition-colors duration-300"
               >
                 {link.label}
@@ -90,7 +99,7 @@ const Navigation = () => {
           {navLinks.map((link) => (
             <button
               key={link.label}
-              onClick={() => scrollToSection(link.href)}
+              onClick={() => handleNavClick(link)}
               className="text-[#F4F7FB] text-2xl font-medium hover:text-[#2EC3E5] transition-colors"
             >
               {link.label}
