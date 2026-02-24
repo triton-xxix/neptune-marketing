@@ -1,0 +1,11 @@
+first_name,last_name,email,phone,company,job_title,linkedin_url,website,industry,lead_source,notes
+John,Doe,john@acme.com,+447123456789,Acme Corp,CEO,https://linkedin.com/in/johndoe,https://acme.com,Technology,outbound,Met at Tech Summit 2024
+Jane,Smith,jane@techstart.io,+447987654321,TechStart,Marketing Director,https://linkedin.com/in/janesmith,https://techstart.io,SaaS,referral,Warm intro from Sarah
+Mike,Johnson,mike@retailplus.co.uk,+442071234567,RetailPlus,Operations Manager,https://linkedin.com/in/mikejohnson,https://retailplus.co.uk,Retail,inbound,Downloaded pricing guide
+Sarah,Williams,sarah@financehub.com,+447555123456,FinanceHub,CFO,,https://financehub.com,Finance,cold,LinkedIn connection
+David,Brown,david@consultingpro.net,+447444987654,ConsultingPro,Founder,https://linkedin.com/in/davidbrown,https://consultingpro.net,Consulting,outbound,No response after 2 emails
+Emma,Davis,emma@ecommerce.co.uk,+447333456789,Ecommerce Ltd,Head of Sales,https://linkedin.com/in/emmadavis,https://ecommerce.co.uk,E-commerce,inbound,Requested callback
+James,Wilson,james@manufacturing.com,+447222789012,Manufacturing Inc,Managing Director,,,Manufacturing,cold,Trade show lead
+Olivia,Taylor,olivia@healthcare.org,+447111345678,HealthCare Solutions,CEO,https://linkedin.com/in/oliviataylor,https://healthcare.org,Healthcare,referral,Former colleague
+William,Anderson,william@logistics.net,+447000876543,Logistics Pro,COO,https://linkedin.com/in/williamanderson,,Logistics,outbound,Spoke in Q3 2024
+Sophia,Thomas,sophia@media.co.uk,+447666234567,Media Group,Creative Director,https://linkedin.com/in/sophiathomas,https://media.co.uk,Media,inbound,Interested in case study

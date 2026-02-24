@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "campaign_defaults": {
+    "batch_size": 50,
+    "reactivation_days": 90,
+    "default_campaign_type": "value_first"
+  },
+  "sms_settings": {
+    "max_length": 320,
+    "include_unsubscribe": false,
+    "sender_name": "Luke @ Neptune",
+    "character_limit_warning": 160
+  },
+  "enrichment_sources": {
+    "domain": {
+      "enabled": true,
+      "skip_free_emails": ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "protonmail.com"]
+    },
+    "linkedin": {
+      "enabled": false,
+      "note": "Requires Kakiyo skill installation and API key"
+    },
+    "website": {
+      "enabled": false,
+      "note": "Requires browser-use skill installation"
+    }
+  },
+  "ghl_mapping": {
+    "contact_fields": {
+      "firstName": "first_name",
+      "lastName": "last_name",
+      "email": "email",
+      "phone": "phone",
+      "companyName": "company",
+      "jobTitle": "job_title",
+      "website": "website",
+      "notes": "notes"
+    },
+    "custom_fields": [
+      {"key": "linkedin_url", "label": "LinkedIn Profile URL"},
+      {"key": "industry", "label": "Industry"},
+      {"key": "company_size", "label": "Company Size"},
+      {"key": "lead_status", "label": "Lead Status"},
+      {"key": "lead_source", "label": "Lead Source"},
+      {"key": "last_contact_date", "label": "Last Contact Date"},
+      {"key": "reactivation_eligible", "label": "Reactivation Eligible"}
+    ]
+  },
+  "pricing_model": {
+    "type": "performance_based",
+    "revenue_share_percent": 50,
+    "minimum_contract_value": 10000,
+    "guarantee": "No payment if zero leads reactivated",
+    "target_profile": "£1M+ businesses with 1,000+ dormant leads/month"
+  },
+  "templates": {
+    "casual_check_in": [
+      "Hi {first_name}, it's been a while since we last spoke about {company}. Quick check-in—are you still looking to {goal}? Reply YES to chat. -Luke @ Neptune",
+      "Hey {first_name}, Neptune Marketing here. We helped a {industry} company add £50k MRR last month. Still interested in growth? Reply YES. -Luke"
+    ],
+    "value_first": [
+      "{first_name}, saw {company} is expanding. Our AI reactivation system typically recovers 15-20% of dormant leads. Worth a 5-min chat? Reply YES. -Luke",
+      "Quick question {first_name}: What's your current system for reactivating old leads? We built something that works on performance basis. Interested? -Luke @ Neptune"
+    ],
+    "direct_offer": [
+      "Hi {first_name}, Neptune Marketing. We guarantee lead reactivation results or you don't pay. Open to seeing how it works for {company}? Reply YES. -Luke",
+      "{first_name}, we only work with 3 {industry} companies per quarter. 2 spots left for Q1. Performance-based pricing. Interested? Reply YES. -Luke"
+    ]
+  }
+}

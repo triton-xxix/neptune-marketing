@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 POWERUP ELECTRICAL LTD | Professional Electrician in SW12 | Free Quotes</title>
+    <meta name="description" content="Expert electrician services in SW12. 5★ rated with 76+ reviews. Emergency service available. Free quotes. Call 07982 999412.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .phone-header { font-size: 1.2rem; font-weight: bold; }
+        .phone-header a { color: #ffd700; text-decoration: none; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 4rem 0; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .trust-badge { background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px; display: inline-block; margin-bottom: 2rem; }
+        .cta-button { background: #ffd700; color: #1e3a5f; padding: 1rem 2rem; font-size: 1.2rem; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block; margin: 0.5rem; }
+        .cta-button:hover { background: #ffed4e; }
+        
+        /* Trust Bar */
+        .trust-bar { background: #f8f9fa; padding: 2rem 0; }
+        .trust-items { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
+        .trust-item { padding: 1rem; }
+        .trust-item strong { display: block; color: #1e3a5f; font-size: 1.2rem; }
+        
+        /* Services */
+        .services { padding: 4rem 0; background: white; }
+        .services h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #1e3a5f; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .service-card { background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #1e3a5f; }
+        .service-card h3 { color: #1e3a5f; margin-bottom: 0.5rem; }
+        .service-card ul { list-style: none; margin-top: 1rem; }
+        .service-card li { padding: 0.25rem 0; }
+        .service-card li:before { content: "✓ "; color: green; font-weight: bold; }
+        
+        /* About */
+        .about { padding: 4rem 0; background: #f8f9fa; }
+        .about h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #1e3a5f; }
+        .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .about-content p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .differentiators { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .diff-item { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .diff-item strong { color: #1e3a5f; display: block; margin-bottom: 0.5rem; }
+        
+        /* Testimonials */
+        .testimonials { padding: 4rem 0; background: white; }
+        .testimonials h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #1e3a5f; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial { background: #f8f9fa; padding: 2rem; border-radius: 10px; font-style: italic; }
+        .testimonial .stars { color: #ffd700; margin-bottom: 1rem; }
+        .testimonial .author { margin-top: 1rem; font-style: normal; font-weight: bold; color: #1e3a5f; }
+        
+        /* Areas */
+        .areas { padding: 4rem 0; background: #1e3a5f; color: white; text-align: center; }
+        .areas h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .areas-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+        .area-tag { background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; }
+        
+        /* FAQ */
+        .faq { padding: 4rem 0; background: #f8f9fa; }
+        .faq h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #1e3a5f; }
+        .faq-item { background: white; margin-bottom: 1rem; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .faq-item h4 { color: #1e3a5f; margin-bottom: 0.5rem; }
+        
+        /* Contact */
+        .contact { padding: 4rem 0; background: white; text-align: center; }
+        .contact h2 { font-size: 2rem; margin-bottom: 1rem; color: #1e3a5f; }
+        .contact-info { margin: 2rem 0; }
+        .contact-info p { margin: 0.5rem 0; font-size: 1.1rem; }
+        .big-phone { font-size: 2rem; font-weight: bold; color: #1e3a5f; margin: 1rem 0; }
+        .big-phone a { color: #1e3a5f; text-decoration: none; }
+        
+        /* Footer */
+        footer { background: #1e3a5f; color: white; padding: 2rem 0; text-align: center; }
+        
+        /* Demo Banner */
+        .demo-banner { background: #ff6b6b; color: white; padding: 0.5rem; text-align: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">⚡ DEMO WEBSITE - Built by Neptune Marketing</div>
+    
+    <header>
+        <div class="container header-content">
+            <div class="logo">⚡ 24/7 POWERUP ELECTRICAL</div>
+            <div class="phone-header">Emergency? <a href="tel:07982999412">07982 999412</a></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="trust-badge">⭐⭐⭐⭐⭐ 5★ Google Rated • 76+ Reviews • 24/7 Service</div>
+            <h1>Professional Electrician Services in SW12</h1>
+            <p>Serving SW12 and surrounding areas with professional electrical services. Emergency callouts, installations, and repairs. Fully certified and insured.</p>
+            <a href="tel:07982999412" class="cta-button">📞 Call Now for Free Quote</a>
+            <a href="#services" class="cta-button">View Our Services</a>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <strong>✓ Fully Insured</strong>
+                </div>
+                <div class="trust-item">
+                    <strong>✓ Work Guaranteed</strong>
+                </div>
+                <div class="trust-item">
+                    <strong>✓ 24/7 Emergency</strong>
+                </div>
+                <div class="trust-item">
+                    <strong>✓ No Call-Out Fee</strong>
+                </div>
+                <div class="trust-item">
+                    <strong>✓ Free Quotes</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>⚡ Emergency Electrical Repairs</h3>
+                    <p>24/7 emergency callouts for electrical faults, power outages, and dangerous wiring. Fast response to keep your home safe.</p>
+                    <ul>
+                        <li>24/7 availability</li>
+                        <li>Rapid response</li>
+                        <li>Safety certified</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🔌 Full & Partial Rewiring</h3>
+                    <p>Complete home rewiring and partial updates. NICEIC certified work with compliance certificates provided.</p>
+                    <ul>
+                        <li>NICEIC certified</li>
+                        <li>Compliance certs</li>
+                        <li>Minimal disruption</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🛡️ Fuse Box Upgrades</h3>
+                    <p>Modern consumer unit replacements with RCD protection. Essential for home safety and insurance compliance.</p>
+                    <ul>
+                        <li>RCD protection</li>
+                        <li>Insurance approved</li>
+                        <li>10-year warranty</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>💡 Lighting Installation</h3>
+                    <p>Indoor and outdoor lighting solutions. LED upgrades, dimmers, security lighting, and smart home systems.</p>
+                    <ul>
+                        <li>Energy efficient</li>
+                        <li>Smart options</li>
+                        <li>Design advice</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>📋 Electrical Testing & EICRs</h3>
+                    <p>Landlord certificates, homebuyer reports, and periodic inspections. Full documentation provided.</p>
+                    <ul>
+                        <li>Landlord legal</li>
+                        <li>Detailed reports</li>
+                        <li>Fast turnaround</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🔌 Socket & Switch Installation</h3>
+                    <p>Additional sockets, USB outlets, and smart switches. Perfect for home offices and modern living.</p>
+                    <ul>
+                        <li>USB options</li>
+                        <li>Smart switches</li>
+                        <li>Clean finish</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Why Choose 24/7 POWERUP ELECTRICAL?</h2>
+            <div class="about-content">
+                <p>We've been serving SW12 and surrounding areas for over 10 years. We're a local business built on reputation, quality workmanship, and customer satisfaction.</p>
+                <p>Our mission is simple: provide honest, reliable electrician services at fair prices. No shortcuts, no surprises — just quality work that keeps your home safe and functional.</p>
+                
+                <div class="differentiators">
+                    <div class="diff-item">
+                        <strong>76+ Happy Customers</strong>
+                        <span>Proudly rated 5 stars on Google with 76+ reviews from satisfied clients.</span>
+                    </div>
+                    <div class="diff-item">
+                        <strong>Fully Certified & Insured</strong>
+                        <span>Full public liability insurance and professional certifications for your peace of mind.</span>
+                    </div>
+                    <div class="diff-item">
+                        <strong>Free, No-Obligation Quotes</strong>
+                        <span>Transparent pricing with no hidden costs. Detailed quotes so you know exactly what you're paying for.</span>
+                    </div>
+                    <div class="diff-item">
+                        <strong>Local & Reliable</strong>
+                        <span>Based in SW12, we understand local properties. We're never far when you need us.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Excellent service from start to finish. Professional, punctual, and great quality work. Would definitely recommend!"</p>
+                    <div class="author">— Sarah M., Local Customer</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Called for an emergency and they came out within the hour. Fair pricing and explained everything clearly."</p>
+                    <div class="author">— James K., Local Customer</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Used them for a full installation. Great communication, tidy workers, and the result is perfect. Highly recommend."</p>
+                    <div class="author">— Linda T., Local Customer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="areas">
+        <div class="container">
+            <h2>Areas We Serve</h2>
+            <p>Based in SW12, we cover all surrounding areas within 20 miles</p>
+            <div class="areas-list">
+                <span class="area-tag">SW12</span>
+                <span class="area-tag">Brixton</span>
+                <span class="area-tag">Clapham</span>
+                <span class="area-tag">Streatham</span>
+                <span class="area-tag">Dulwich</span>
+                <span class="area-tag">Herne Hill</span>
+                <span class="area-tag">West Norwood</span>
+                <span class="area-tag">Tulse Hill</span>
+                <span class="area-tag">Balham</span>
+                <span class="area-tag">Tooting</span>
+                <span class="area-tag">Camberwell</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>Are you NICEIC registered?</h4>
+                <p>Yes, we are fully NICEIC registered and certified. All work comes with compliance certificates and meets BS 7671 standards.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you offer emergency callouts?</h4>
+                <p>Yes, we provide 24/7 emergency electrical services for dangerous faults, power outages, and urgent repairs.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you provide EICR certificates?</h4>
+                <p>Absolutely. We provide Electrical Installation Condition Reports (EICRs) for landlords, homeowners, and businesses with full documentation.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How much does a rewire cost?</h4>
+                <p>Full house rewires typically range from £3,000-£6,000 depending on property size. We provide free, detailed quotes with no obligation.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you offer guarantees?</h4>
+                <p>Yes, all our work comes with a minimum 6-year guarantee on workmanship. Many installations include manufacturer warranties too.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Get Your Free Quote Today</h2>
+            <p>Call now for a free, no-obligation quote</p>
+            <div class="big-phone"><a href="tel:07982999412">📞 07982 999412</a></div>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 42-44 Nightingale Square, London SW12 8QL</p>
+                <p><strong>Email:</strong> info@247powerupelectricalltd.co.uk</p>
+                <p><strong>Hours:</strong> Mon-Fri 8am-6pm | Sat 9am-4pm | Sun Emergency Only</p>
+            </div>
+            <a href="tel:07982999412" class="cta-button">Call Now: 07982 999412</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 24/7 POWERUP ELECTRICAL LTD. All rights reserved.</p>
+            <p>Fully insured and NICEIC registered electrician serving SW12 and surrounding areas.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">⚡ This is a DEMO WEBSITE built by Neptune Marketing</p>
+        </div>
+    </footer>
+</body>
+</html>
