@@ -64,27 +64,72 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Send email using Formspree (free, no backend needed)
-    // Sends to triton.xxix@neptunemarketing.co.uk and luke.boyd@neptunemarketing.co.uk
+    // Parse name for GHL
+    const nameParts = formData.name.trim().split(' ');
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ') || '';
+    
+    // GHL Webhook submission (primary)
+    const ghlPromise = fetch('https://services.leadconnector.com/hooks/MBCpwbkRCtAUVnjZKzpn/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email: formData.email,
+        phone: formData.phone,
+        companyName: formData.company,
+        website: formData.website,
+        tags: ['website-lead', 'neptune-marketing', 'lead-reactivation'],
+        source: 'website',
+        customFields: [
+          { key: 'role', value: formData.role },
+          { key: 'description', value: formData.description },
+          { key: 'message', value: formData.message }
+        ]
+      }),
+    }).catch(err => {
+      console.log('GHL submission failed, will use Formspree backup:', err);
+      return { ok: false };
+    });
+    
+    // Formspree submission (backup)
+    const formspreePromise = fetch('https://formspree.io/f/mykdyqgd', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        ...formData,
+        _subject: 'New Lead Inquiry - Neptune Marketing',
+        _replyto: formData.email,
+      }),
+    });
+    
     try {
-      const response = await fetch('https://formspree.io/f/mykdyqgd', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          _subject: 'New Lead Inquiry - Neptune Marketing',
-          _replyto: formData.name,
-        }),
-      });
+      // Wait for both submissions (GHL + Formspree)
+      const [ghlResponse, formspreeResponse] = await Promise.allSettled([ghlPromise, formspreePromise]);
       
-      if (response.ok) {
+      // Log results
+      console.log('GHL submission:', ghlResponse.status === 'fulfilled' && ghlResponse.value.ok ? 'Success' : 'Failed/Backup');
+      console.log('Formspree submission:', formspreeResponse.status === 'fulfilled' && formspreeResponse.value.ok ? 'Success' : 'Failed');
+      
+      // Show success if at least one succeeded
+      const ghlSuccess = ghlResponse.status === 'fulfilled' && ghlResponse.value.ok;
+      const formspreeSuccess = formspreeResponse.status === 'fulfilled' && formspreeResponse.value.ok;
+      
+      if (ghlSuccess || formspreeSuccess) {
         setIsSubmitted(true);
+      } else {
+        // Both failed - show error
+        alert('Something went wrong. Please try again or email us directly.');
       }
+      
     } catch (error) {
       console.error('Form submission error:', error);
-      // Still show success for demo purposes
+      // Still show success for demo purposes, but log error
       setIsSubmitted(true);
     }
     
