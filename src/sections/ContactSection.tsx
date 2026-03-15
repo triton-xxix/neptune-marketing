@@ -69,8 +69,8 @@ const ContactSection = () => {
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
     
-    // GHL Webhook submission (primary)
-    const ghlPromise = fetch('https://services.leadconnector.com/hooks/MBCpwbkRCtAUVnjZKzpn/contact', {
+    // GHL submission via Vercel serverless function (API key secure on server)
+    const ghlPromise = fetch('/api/submit-to-ghl', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -82,13 +82,9 @@ const ContactSection = () => {
         phone: formData.phone,
         companyName: formData.company,
         website: formData.website,
-        tags: ['website-lead', 'neptune-marketing', 'lead-reactivation'],
-        source: 'website',
-        customFields: [
-          { key: 'role', value: formData.role },
-          { key: 'description', value: formData.description },
-          { key: 'message', value: formData.message }
-        ]
+        role: formData.role,
+        description: formData.description,
+        message: formData.message
       }),
     }).catch(err => {
       console.log('GHL submission failed, will use Formspree backup:', err);
