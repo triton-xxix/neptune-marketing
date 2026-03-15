@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Point Lead Reactivation Checklist for Home Improvement Companies | Neptune Marketing</title>
+    <meta name="description" content="Unlock 20-30% more revenue from your dormant leads with this proven 10-point checklist for home improvement businesses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #0f172a;
+            --accent: #06b6d4;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--gray-50);
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--gray-200);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, #1e3a5f 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(14,165,233,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(14, 165, 233, 0.2);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-200);
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gray-200);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--secondary);
+        }
+        
+        /* Main Content */
+        .main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .intro {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .intro p {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        /* Checklist */
+        .checklist {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .checklist h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .checklist h2 i {
+            color: var(--primary);
+        }
+        
+        .checklist-intro {
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+        
+        .checklist-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-100);
+            transition: background 0.3s ease;
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist-item:hover {
+            background: var(--gray-50);
+            border-radius: 12px;
+        }
+        
+        .item-number {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .item-content h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-content p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .item-content ul {
+            margin-top: 0.5rem;
+            margin-left: 1.25rem;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        .item-content li {
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 3rem;
+        }
+        
+        .download-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .download-section p {
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Case Study */
+        .case-study {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        
+        .case-study h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .case-study h2 i {
+            color: var(--success);
+        }
+        
+        .case-study p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-stat {
+            background: var(--gray-50);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .case-stat-number {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .case-stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--secondary);
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .cta-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--gray-200);
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: var(--gray-200);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .footer h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer ul {
+            list-style: none;
+        }
+        
+        .footer li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 2rem 2rem 0;
+            border-top: 1px solid var(--gray-700);
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .stats-grid,
+            .case-study-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .checklist-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-wave-square"></i>
+                Neptune Marketing
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="case-study-200k.html">Case Study</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-tools"></i>
+                Free Guide
+            </div>
+            <h1>10-Point Lead Reactivation Checklist for <span>Home Improvement Companies</span></h1>
+            <p class="hero-subtitle">Transform dormant leads into booked appointments. Home improvement businesses using this system recover 20-30% of "dead" leads within 90 days — without spending more on ads.</p>
+            <div class="hero-cta">
+                <a href="downloads/lead-reactivation-checklist-home-improvements.pdf" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download PDF Checklist
+                </a>
+                <a href="case-study-200k.html" class="btn btn-secondary">
+                    <i class="fas fa-chart-line"></i>
+                    See £200K Case Study
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Intro -->
+        <section class="intro">
+            <h2>Your Database Is a Goldmine You're Ignoring</h2>
+            <p>Every home improvement business has them: leads who got a quote, showed interest, then went quiet. Maybe they were "thinking about it," waiting for the right time, or got distracted by another project. These aren't dead leads — they're dormant opportunities.</p>
+            <p>After helping dozens of home improvement companies (builders, renovators, loft conversion specialists, and general contractors) reactivate their dormant databases, we've identified the exact 10-step system that works. Follow this checklist and you'll unlock revenue hiding in plain sight.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">£204K</span>
+                    <span class="stat-label">Revenue Recovered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">23%</span>
+                    <span class="stat-label">Response Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">47 Days</span>
+                    <span class="stat-label">Average Campaign</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section class="checklist">
+            <h2><i class="fas fa-clipboard-check"></i> The 10-Point Checklist</h2>
+            <p class="checklist-intro">Work through these steps in order. Each builds on the last to create a systematic lead reactivation machine.</p>
+
+            <div class="checklist-item">
+                <div class="item-number">1</div>
+                <div class="item-content">
+                    <h3>Segment Your Dormant Leads by Project Type</h3>
+                    <p>Don't treat all old leads the same. Group them by the service they enquired about: extensions, loft conversions, kitchen renovations, bathroom refits, or general renovations. Each segment needs different messaging and timing.</p>
+                    <ul>
+                        <li>High-ticket projects (extensions, conversions) need longer nurture sequences</li>
+                        <li>Seasonal projects (garden work, exterior painting) can be reactivated at optimal times</li>
+                        <li>Emergency repairs can be contacted immediately regardless of dormancy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">2</div>
+                <div class="item-content">
+                    <h3>Calculate Your Dormant Lead Value</h3>
+                    <p>Before starting, know your numbers. Count your dormant leads and multiply by your average project value. If you have 500 old leads and your average job is £15,000, you're sitting on £7.5M in potential pipeline.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">3</div>
+                <div class="item-content">
+                    <h3>Clean Your Contact Data</h3>
+                    <p>Remove duplicates, update phone numbers where possible, and verify email addresses. A clean database improves deliverability and response rates. Tools like NeverBounce or ZeroBounce can validate emails in bulk.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">4</div>
+                <div class="item-content">
+                    <h3>Choose Your Reactivation Channel</h3>
+                    <p>Home improvement leads respond best to personal, direct outreach:</p>
+                    <ul>
+                        <li><strong>SMS:</strong> 90%+ open rates, best for short, personal messages</li>
+                        <li><strong>Email:</strong> Good for sharing portfolio work and detailed offers</li>
+                        <li><strong>Phone:</strong> Highest conversion but most time-intensive</li>
+                        <li><strong>WhatsApp:</strong> Growing preference for sharing photos and project ideas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">5</div>
+                <div class="item-content">
+                    <h3>Craft the "Soft Touch" Opening Message</h3>
+                    <p>Never open with "Are you still interested?" That's salesy and creates resistance. Instead, lead with value or relevance:</p>
+                    <ul>
+                        <li>"Hi [Name], we just completed a similar [project type] to what you were considering. Thought you might like to see the before/after photos."</li>
+                        <li>"Hi [Name], with spring approaching, we're booking [service] projects for March. Wanted to reach out in case you're still considering it."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">6</div>
+                <div class="item-content">
+                    <h3>Build a 5-Touch Sequence (Not Just One Message)</h3>
+                    <p>One message isn't enough. Create a sequence spaced over 3-4 weeks:</p>
+                    <ul>
+                        <li>Touch 1: Soft value-based opener</li>
+                        <li>Touch 2: Social proof (recent project photos/reviews)</li>
+                        <li>Touch 3: Seasonal relevance or special offer</li>
+                        <li>Touch 4: Direct question about their project timeline</li>
+                        <li>Touch 5: Final "break-up" message (gives them permission to say no)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">7</div>
+                <div class="item-content">
+                    <h3>Use Social Proof That Matches Their Project</h3>
+                    <p>Generic testimonials don't work. Show them a project similar to what they wanted — same type of work, similar property, or local to their area. Before/after photos are your most powerful reactivation tool.</p>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">8</div>
+                <div class="item-content">
+                    <h3>Create a Low-Friction Offer</h3>
+                    <p>Don't ask for a commitment on the first contact. Offer something easy:</p>
+                    <ul>
+                        <li>Free site visit with updated quote</li>
+                        <li>15-minute phone consultation to discuss their plans</li>
+                        <li>Portfolio of similar completed projects</li>
+                        <li>Financing options or payment plans</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">9</div>
+                <div class="item-content">
+                    <h3>Track Responses and Adjust</h3>
+                    <p>Monitor open rates, reply rates, and conversion to appointments. Test different message angles:</p>
+                    <ul>
+                        <li>Which project type segments respond best?</li>
+                        <li>What time of day gets the best reply rate?</li>
+                        <li>Which offers get the most bookings?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-number">10</div>
+                <div class="item-content">
+                    <h3>Systematize for Ongoing Reactivation</h3>
+                    <p>Don't make this a one-time campaign. Build a system:</p>
+                    <ul>
+                        <li>Auto-tag new leads that go 30 days without booking</li>
+                        <li>Schedule quarterly reactivation campaigns</li>
+                        <li>Create templates for your best-performing messages</li>
+                        <li>Train a team member to handle responses</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download -->
+        <section class="download-section">
+            <h2><i class="fas fa-file-download"></i> Download the Complete Checklist</h2>
+            <p>Get the printable PDF version of this checklist, plus bonus email and SMS templates you can use immediately to reactivate your dormant home improvement leads.</p>
+            <a href="downloads/lead-reactivation-checklist-home-improvements.pdf" class="btn-white">
+                <i class="fas fa-download"></i>
+                Download Free PDF
+            </a>
+        </section>
+
+        <!-- Case Study -->
+        <section class="case-study">
+            <h2><i class="fas fa-trophy"></i> Real Results: How We Recovered £204K for a Home Improvement Business</h2>
+            <p>A building and renovation company in South London had 1,847 dormant leads spanning 3 years. Using this exact 10-point system, we reactivated 425 of them and converted 98 into booked appointments — generating £204,000 in recovered revenue over 47 days.</p>
+            
+            <div class="case-study-grid">
+                <div class="case-stat">
+                    <div class="case-stat-number">1,847</div>
+                    <div class="case-stat-label">Dormant Leads</div>
+                </div>
+                <div class="case-stat">
+                    <div class="case-stat-number">23%</div>
+                    <div class="case-stat-label">Response Rate</div>
+                </div>
+                <div class="case-stat">
+                    <div class="case-stat-number">98</div>
+                    <div class="case-stat-label">Appointments Booked</div>
+                </div>
+                <div class="case-stat">
+                    <div class="case-stat-number">£204K</div>
+                    <div class="case-stat-label">Revenue Recovered</div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-bottom: 0;">
+                <a href="case-study-200k.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">
+                    Read the full case study <i class="fas fa-arrow-right"></i>
+                </a>
+            </p>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2>Want Us to Reactivate Your Dormant Leads?</h2>
+            <p>We specialise in database reactivation for home improvement businesses. Our done-for-you service handles everything: segmentation, messaging, responses, and appointment booking. You only pay when we deliver results.</p>
+            <a href="contact.html" class="btn btn-primary" style="background: var(--white); color: var(--secondary);">
+                <i class="fas fa-calendar"></i>
+                Book a Free Strategy Call
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Neptune Marketing</h3>
+                <p>Database reactivation specialists for home improvement businesses. We turn dormant leads into booked appointments — without you spending more on ads.</p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Database Reactivation</a></li>
+                    <li><a href="#">AI Lead Gen</a></li>
+                    <li><a href="#">Web Design</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="case-study-200k.html">Case Studies</a></li>
+                    <li><a href="#">Free Guides</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:hello@neptunemarketing.ai">hello@neptunemarketing.ai</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Neptune Marketing. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
